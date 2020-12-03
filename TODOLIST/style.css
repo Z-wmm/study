@@ -1,0 +1,24 @@
+#app{
+    width: 500px;
+    margin: 200px auto;
+    
+}
+button{
+    background-color: rgb(197, 197, 197);
+    border: none;
+    outline: none;
+}
+#in :first-child{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+#in button{
+    width: 80px;
+    height: 35px;
+    vertical-align: top;
+
+}
+.searchResult{
+    display: none;
+}

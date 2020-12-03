@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="in">
+            <input type="text" v-model = 'task'>
+            <button v-on:click = 'add' ref = 'change'>添加</button>
+            <button v-on:click = 'sea' >搜索</button>
+        </div>
+        <div id="show">
+            <ul class="dos" v-for = "(item,index) in texts">
+                <li>{{item}} <button v-on:click = 'del(index)'>删除</button> <button v-on:click = 'mod(index)'>修改</button></li>
+            </ul>
+        </div>
+        <div class="searchResult" ref = 'search'>
+            <h3>查找结果：</h3>
+            <ul v-for = "item in result">
+                <li>{{item}}</li>
+            </ul> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
