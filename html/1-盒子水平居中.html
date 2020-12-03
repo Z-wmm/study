@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三种定位方案实现盒子水平居中</title>
+  <style>
+    html,body,.father{
+      height: 100%;
+      overflow: hidden;
+    }
+    .child{
+      width: 100px;
+      height: 50px;
+      background-color: deepskyblue;
+      border: 2px solid #111;
+      text-align: center;
+      line-height: 50px;
+      font-size:20px;
+    }
+
+    /* 一、定位 */
+
+    /* .father{
+      position: relative;
+    } */
+
+    /* 1.这种方式需要给 .child 设置宽高
+    并且不利于后期改 .child 的宽高 */
+    /* .child{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -25px;
+    } */
+
+    /* 2.这种方式还是需要设置 .child 的宽高
+    只是在更改 .child 的宽高更加方便 */
+    /* .child{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    } */
+
+    /* 3.这种方式即使不设置高也可以，但是不兼容 */
+    /* .child{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);  //相对于自身偏移 
+    } */
+
+    /* ============================================================ */
+
+    /* 二、flex */
+
+    /* .father{
+      display: flex;
+      justify-content:center;
+      align-items:center;
+    } */
+
+    /* ============================================================= */
+
+    /* 四、table-cell */
+    /* 这种方式是针对文本的所以需要给父元素设置宽高
+    子元素要变成行内块级元素 */
+    .father{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      width: 500px;
+      height: 500px;
+    }
+    .child{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="father" id="father">
+    <div class="child" id="child">
+      毛不易
+    </div>
+  </div>
+
+  <!-- 三、js实现 -->
+  <!-- <script>
+    let fatherW = father.offsetWidth,
+        fatherH = father.offsetHeight,
+        childW = child.offsetWidth,
+        childH = child.offsetHeight
+    father.style.position = 'relative'
+    child.style.position = 'absolute'
+    child.style.top = (fatherH - childH) / 2 + 'px'
+    child.style.left = (fatherW - childW) / 2 + 'px'
+  </script> -->
+</body>
+</html>

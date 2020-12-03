@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三列布局，中间自适应</title>
+  <style>
+    .content{
+      width: 100%;
+      /* display: flex; */
+    }
+    .left{
+      height: 500px;
+      width: 200px;
+      background-color: deepskyblue;
+      float: left;
+    }
+    .right{
+      width: 300px;
+      height: 600px;
+      background-color: rgb(156, 190, 104);
+      float: right;
+    }
+    .center{
+      height: 700px;
+      min-width: 100px;
+      background-color: #666;
+      /* margin: 0 300px 0 200px; */
+      /* flex: 1; */
+      overflow: hidden;
+    }
+    .clearfix::after{
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="content clearfix">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+  </div>
+  123
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content{
+      margin: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(-20deg) rotateY(20deg);
+    }
+    .font{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(218, 72, 72);
+      opacity: 0.5;
+    }
+    .back{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(218, 167, 72);
+      text-align: center;
+      opacity: 0.5;
+      transform:translateZ(-100px);
+    }
+    .left{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(150, 218, 72);
+      opacity: 0.5;
+      transform:translateX(-50px) translateZ(-50px) rotateY(90deg) ;
+    }
+    .right{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(72, 218, 186);
+      opacity: 0.5;
+      transform:translateX(50px) translateZ(-50px) rotateY(90deg) ;
+    }
+    .top{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(72, 91, 218);
+      opacity: 0.5;
+      transform:translateY(-50px) translateZ(-50px) rotateX(90deg) ;
+    }
+    .botton{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(157, 72, 218);
+      opacity: 0.5;
+      transform:translateY(50px) translateZ(-50px) rotateX(90deg) ;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="font">1</div>
+    <div class="back">6</div>
+    <div class="left">2</div>
+    <div class="right">5</div>
+    <div class="top">3</div>
+    <div class="botton">4</div>
+  </div>
+</body>
+</html>
